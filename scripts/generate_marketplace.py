@@ -22,7 +22,7 @@ CATEGORY_TO_PLUGIN = {
     "offsec": "offsec-skills",
 }
 
-MARKETPLACE_PATH_REL = "skills/.claude-plugin/marketplace.json"
+MARKETPLACE_PATH_REL = ".claude-plugin/marketplace.json"
 
 
 def discover_skills(skills_root: Path) -> dict[str, list[str]]:

@@ -42,7 +42,7 @@ MAX_SKILL_LINES = 750
 MIN_DESCRIPTION_LEN = 100
 
 REPO_ROOT = Path(__file__).parent.parent
-MARKETPLACE_PATH = REPO_ROOT / "skills" / ".claude-plugin" / "marketplace.json"
+MARKETPLACE_PATH = REPO_ROOT / ".claude-plugin" / "marketplace.json"
 
 
 # ---------------------------------------------------------------------------
