@@ -49,11 +49,12 @@ def main() -> None:
     existing = json.loads(marketplace_path.read_text())
     discovered = discover_skills(repo_root / "skills")
 
-    # Update the skills list for each known plugin; leave unknown plugins untouched
+    # Update the skills list and pin source for each known plugin; leave unknown plugins untouched
     for plugin in existing["plugins"]:
         name = plugin["name"]
         if name in discovered:
             plugin["skills"] = discovered[name]
+            plugin["source"] = "./skills"
 
     output = json.dumps(existing, indent=2) + "\n"
 
