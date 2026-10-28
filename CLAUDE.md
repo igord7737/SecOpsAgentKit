@@ -92,7 +92,7 @@ The validator checks:
 
 ### Marketplace Integration
 
-Skills are registered in `.claude-plugin/marketplace.json` at the repo root, the file Claude Code installs from. Each plugin's `source` is `./skills`, so skill paths are relative to `skills/`. That makes `skills/` the root of all 7 plugins: keep only the category directories and `_template/` at its top level, because a plugin component placed there, such as an `agents/` directory, loads into every plugin.
+Skills are registered in `.claude-plugin/marketplace.json` at the repo root, the file Claude Code installs from. Each plugin's `source` is `./skills`, so skill paths are relative to `skills/`. That makes `skills/` the root of all 7 plugins: keep only the category directories and `_template/` at its top level. Anything else placed there, such as `agents/`, `commands/`, `hooks/` or `.mcp.json`, loads into every plugin, and `generate_marketplace.py --check` fails on it.
 
 ```json
 {
